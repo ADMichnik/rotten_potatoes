@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,6 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+
+// incjecting AuthService so it can be used in login()
+// incjecting Router so we can use it in login()
+
+constructor (private auth: AuthService, private router: Router) {}
 
 // using two way binding we can check if required fields are filled
 // if thety are not filled we can display error message next to login button
@@ -19,7 +26,16 @@ login() {
     this.errorMsg = "Username is required."
   } else if (this.password.trim().length === 0) {
     this.errorMsg = "Password is required."
-  } 
+  } else {
+    this.errorMsg ="";
+    let res = this.auth.login(this.username, this.password);
+    if (res === 200) {
+      this.router.navigate(['home']);
+    }
+    if (res === 403) {
+      this.errorMsg = 'Invalid credentials.'
+    }
+  }
 }
 
 }
