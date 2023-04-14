@@ -26,7 +26,7 @@
         position: absolute;
         top: 50px;
         left: 50px;
-        height: 90vh;
+        height: calc(100vh - 50px);
     }
     .login-form {
         width: 500px;
