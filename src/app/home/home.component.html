@@ -4,7 +4,18 @@
         <div class="trending-movies">
             <div class="top">
                 <h4>Trending Movies</h4>
-                <div class="view">View</div>
+                <div class="view-all">View all</div>
+            </div>
+            <div class="movie-thumbnail">
+                <div class="movie" *ngFor="let movie of trendingMovies">
+                    <div class="cover">
+                        <img [src]="movie.cover" alt="">
+                    </div>
+                    <div class="detail">
+                        <div class="name">{{ movie.name }}</div>
+                        <div class="rating">{{ movie.rating }}</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
