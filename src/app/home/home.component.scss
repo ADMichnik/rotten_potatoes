@@ -21,7 +21,27 @@
               color: #ff9900;
               cursor: pointer;
             }
-        }            
+        }  
+        .movie-thumbnail {
+          display: flex;
+          justify-content: space-between;
+          .movie {
+            .cover {
+              img {
+                border-radius: 5px;
+              }
+            }
+            .detail {
+              width: 180px;
+              .name {
+                font-weight: bold;
+                height: 50px;
+                margin-top: 5px;
+                cursor: pointer;
+              }
+            }
+          }
+        }          
     }
 
 
