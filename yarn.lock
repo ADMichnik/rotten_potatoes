@@ -1495,6 +1495,11 @@
     read-package-json-fast "^3.0.0"
     which "^3.0.0"
 
+"@popperjs/core@^2.11.7":
+  version "2.11.7"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.7.tgz#ccab5c8f7dc557a52ca3288c10075c9ccd37fff7"
+  integrity sha512-Cr4OjIkipTtcXKjAsm8agyleBuDHvxzeBoa1v543lbv1YaIwQjESsVcmjiWiPEbC1FIeHOG/Op9kdCmAmiS3Kw==
+
 "@schematics/angular@15.2.6":
   version "15.2.6"
   resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-15.2.6.tgz#5a0face51806f6b2adf67eef73b08c31744b07bc"
