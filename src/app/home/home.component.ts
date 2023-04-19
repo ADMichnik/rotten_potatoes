@@ -29,4 +29,5 @@ export class HomeComponent {
   }
 
   // 4.we can now use http get() method to get data and assign every object to array
+
 }
