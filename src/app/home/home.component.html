@@ -14,15 +14,8 @@
                     <div class="detail">
                         <div class="name">{{ movie.name }}</div>
                         <div class="rating">{{ movie.rating }}</div>
-                        <ngb-rating 
-                        [(rate)]="movie.rating"
-                        [max]="5">
-                            <ng-template let-fill="fill">
-                              <span class="defaultHeart" [class.filled]="fill === 100">
-                                <span class="paintedHeart" [style.width.%]="fill">♥</span>♥
-                              </span>
-                            </ng-template>
-                          </ngb-rating>
+                        <app-star-rating [rating]="movie.rating"></app-star-rating>
+                        <!-- I pass the rating value to app-star-rating component -->
                     </div>
                 </div>
             </div>
