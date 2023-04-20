@@ -39,6 +39,16 @@
                 margin-top: 5px;
                 cursor: pointer;
               }
+              .rating {
+                padding-right: 45px;
+                position: relative;
+                .rating-value {
+                  position: absolute;
+                  top: 21px;
+                  right: 25px;
+                  font-weight: bold;
+                }
+              }
             }
           }
         }          

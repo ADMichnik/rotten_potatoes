@@ -13,8 +13,10 @@
                     </div>
                     <div class="detail">
                         <div class="name">{{ movie.name }}</div>
-                        <div class="rating">{{ movie.rating }}</div>
-                        <app-star-rating [rating]="movie.rating"></app-star-rating>
+                        <div class="rating">
+                            <span class="rating-value">{{ movie.rating }}</span>
+                            <app-star-rating [rating]="movie.rating" [isReadOnly]="true"></app-star-rating>
+                        </div>
                         <!-- I pass the rating value to app-star-rating component -->
                     </div>
                 </div>
