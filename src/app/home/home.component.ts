@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent {
 
   trendingMovies: any;
+  theatreMovies: any;
 
   constructor (private http: HttpClient) {}
 
@@ -17,6 +18,7 @@ export class HomeComponent {
 
   ngOnInit() {
     this.getTrendingMovies();
+    this.getTheatreMovies();
   }
 
   // 1.calling getTrenfingMovies on ngOnInit hook so it gets the data from data file (ussually data is send in this format by API)
@@ -28,6 +30,12 @@ export class HomeComponent {
     });
   }
 
+  getTheatreMovies() {
+    this.http.get('http://localhost:4200/assets/data/theatre-movies.json').subscribe((movies)=> {
+      this.theatreMovies = movies;
+      console.log(movies);
+    });
+  }
   // 4.we can now use http get() method to get data and assign every object to array
 
 }
