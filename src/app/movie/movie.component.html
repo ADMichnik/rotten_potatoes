@@ -14,7 +14,26 @@
                 <img [src]="movie?.cover" alt="">
             </div>
         </div>
-        <div class="right"></div>
+        <div class="right">
+            <div class="title">Rate this movie</div>
+            <div class="rating-form">
+                <div class="form-group">
+                    <label for="uname">Name</label>
+                    <input type="text" name="uname" id="" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <app-star-rating [rating]="0" [isReadOnly]="false"></app-star-rating>
+                </div>
+                <div class="form-group">
+                    <label for="review">Review</label>
+                    <textarea name="review" rows="3" class="form-control"></textarea>
+                </div>
+                <div class="btn-container">
+                <button class="btn btn-dark">Submit</button>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="bottom"></div>
 </div>
