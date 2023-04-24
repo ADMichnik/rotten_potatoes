@@ -2,9 +2,17 @@
 <div class="movie-container">
     <div class="top">
         <div class="left">
-            <div class="name">{{ movie.name }}</div>
-            <div class="rating"></div>
-            <div class="cover"></div>
+            <div class="name">{{ movie?.name }}</div>
+            <div class="rating">
+                <span class="ratin-value">{{ movie.rating }}</span>
+                <app-star-rating 
+                [rating]="movie?.rating" 
+                [isReadOnly]="true"
+                ></app-star-rating>
+            </div>
+            <div class="cover">
+                <img [src]="movie?.cover" alt="">
+            </div>
         </div>
         <div class="right"></div>
     </div>
