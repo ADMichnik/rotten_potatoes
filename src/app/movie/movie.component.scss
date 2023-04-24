@@ -53,4 +53,19 @@
         }
        }
     }
+    .bottom {
+        margin-top: 50px;
+        .title {
+            margin-bottom: 30px;
+        }
+        .reviews {
+            width: 1000px;
+            .review {
+                margin-bottom: 25px;
+                background-color: #f1f1f1;
+                padding: 20px;
+                border-radius: 5px;
+            }
+        }
+    }
 }

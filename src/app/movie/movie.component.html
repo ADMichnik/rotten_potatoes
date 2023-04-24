@@ -35,5 +35,24 @@
             </div>
         </div>
     </div>
-    <div class="bottom"></div>
+    <div class="bottom">
+        <h4 class="title">Reviews</h4>
+        <div class="reviews">
+            <div class="review" *ngFor="let review of movie?.reviews">
+                <div class="review-detail">
+                    <div class="review-left">
+                        <div class="author">{{ review.author }}</div>
+                        <div class="author_dt">{{ review.published_on }}</div>
+                    </div>
+                    <div class="review-right">
+                        <div class="rating">
+                            <app-star-rating [rating]="review.rating" [isReadOnly]="false"></app-star-rating>
+                            <span class="rating-value"> {{ review.rating }}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-text"></div>
+            </div>
+        </div>
+    </div>
 </div>
